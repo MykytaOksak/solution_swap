@@ -1,7 +1,7 @@
 import React from 'react'
 import CreatePost from './../CreatePost/CreatePost'
 import PostCard from '../PostCard/PostCard'
-import TASKS from './../shared/tasks'
+import {TASKS} from './../shared/tasks'
 
 const PB = () => {
     let PBTasks = TASKS.filter(task => task.type=='PB')
