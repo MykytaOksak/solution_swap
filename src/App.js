@@ -14,7 +14,7 @@ function App() {
         <BrowserRouter>
             <Header/>
             <Container className='col-11 col-md-6 mt-3'>
-                <Route path='/solutions_swap' exact component={Home}/>
+                <Route path='/' exact component={Home}/>
                 <Route path='/AllTasks' component={AllTasks}/>
                 <Route path='/PB' component={PB}/>
                 <Route path='/MathStat' component={MathStat}/>

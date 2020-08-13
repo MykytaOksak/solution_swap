@@ -9,7 +9,7 @@ const Header = props => {
     return (
         <Jumbotron className={HeaderStyle.jumbotron}>
             <Navbar collapseOnSelect expand="sm" variant="dark">
-                <Navbar.Brand as={Link} to="/solutions_swap"><h3>Solutions Swap</h3></Navbar.Brand>
+                <Navbar.Brand as={Link} to="/"><h3>Solutions Swap</h3></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav>
