@@ -8,8 +8,8 @@ const MathLog = () => {
 
     return (
         <div>
-            <CreatePost task={MathLogTasks}/>
-            <PostCard/>
+            <CreatePost/>
+            <PostCard task={MathLogTasks}/>
 
         </div>
     )
