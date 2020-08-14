@@ -4,7 +4,7 @@ import PostCard from '../PostCard/PostCard'
 import {TASKS} from './../shared/tasks'
 
 const MathStat = () => {
-    let MathStatTasks = TASKS.filter(task => task.type=='MathStat')
+    let MathStatTasks = TASKS.filter(task => task.type === 'MathStat')
 
     return (
         <div>

@@ -4,7 +4,7 @@ import PostCard from '../PostCard/PostCard'
 import {TASKS} from './../shared/tasks'
 
 const PB = () => {
-    let PBTasks = TASKS.filter(task => task.type=='PB')
+    let PBTasks = TASKS.filter(task => task.type === 'PB')
 
     return (
         <div>
