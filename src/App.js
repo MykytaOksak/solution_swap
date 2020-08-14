@@ -4,7 +4,7 @@ import {Container} from 'react-bootstrap'
 import Header from './components/Header/Header'
 import AllTasks from './components/AllTasks/AllTasks'
 import PB from './components/PB/PB';
-import Redirect, {BrowserRouter, Route} from 'react-router-dom';
+import {Redirect, BrowserRouter, Route} from 'react-router-dom';
 import MathStat from './components/MathStat/MathStat';
 import MathLog from './components/MathLog/MathLog';
 import Home from './components/Home/Home';
