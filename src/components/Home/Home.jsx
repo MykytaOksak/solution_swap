@@ -1,10 +1,9 @@
 import React from 'react'
-import CreatePost from './../CreatePost/CreatePost'
-import PostCard from '../PostCard/PostCard'
+import HomeStyle from './Home.module.css'
 
-const Home = () => {
+const Home = props => {
     return (
-        <div>
+        <div className={HomeStyle.home}>
             <h4>Welcome on a truly communist's website!</h4>
         </div>
     )

@@ -1,15 +1,12 @@
 import React from 'react'
 import CreatePost from './../CreatePost/CreatePost'
 import PostCard from '../PostCard/PostCard'
-import {TASKS} from './../shared/tasks'
 
-const MathStat = () => {
-    let MathStatTasks = TASKS.filter(task => task.type === 'MathStat')
-
+const MathStat = props => {
     return (
         <div>
             <CreatePost/>
-            <PostCard task={MathStatTasks}/>
+            <PostCard task={props.tasks}/>
         </div>
     )
 }
