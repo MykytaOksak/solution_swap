@@ -12,3 +12,8 @@
     font-size: 14pt;
 }
 
+.navbar {
+    background: rgba(0, 0, 0, 0.8) !important;
+    backdrop-filter: saturate(180%) blur(20px);
+}
+

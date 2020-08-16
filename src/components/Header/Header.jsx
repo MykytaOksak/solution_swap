@@ -8,9 +8,9 @@ const Header = props => {
     console.log(props)
     return (
         <React.Fragment>
-            <Navbar sticky="top" bg='dark' collapseOnSelect expand="sm" variant="dark">
+            <Navbar sticky="top" className={HeaderStyle.navbar} collapseOnSelect expand="sm" variant="dark">
                     <Navbar.Brand to="/Home">
-                        <img src='https://www.pngrepo.com/png/208426/180/switch-swap.png' width='30' height='30'/>
+                        <img src={require('./swapLogo.png')} width='30' height='30' />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
