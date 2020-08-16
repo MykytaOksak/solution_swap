@@ -1,11 +1,11 @@
 import React from 'react'
 import {Button, Form} from 'react-bootstrap'
-
+import CreatePostStyle from './CreatePost.module.css'
 const CreatePost = () => {
     return (
-        <Form>
+        <Form className={`${CreatePostStyle.form} ${'mt-4 mb-4'}`}>
             <Form.Group>
-                <Form.Control as="textarea" rows="3" placeholder="Write about your problem..."/>
+                <Form.Control className={`${CreatePostStyle.form}`} as="textarea" rows="3" placeholder="Write about your problem..."/>
             </Form.Group>
 
             <Form.Group>

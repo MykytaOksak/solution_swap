@@ -1,18 +1,15 @@
 import React from 'react'
-import {Card} from 'react-bootstrap'
+import {Image, Card} from 'react-bootstrap'
 import PostCardStyle from './PostCardStyle.module.css'
 
 const RenderTask = ({title, description}) => {
     return (
-        <Card bg='light' border="light" style={{width: '100%'}} className='mb-5' width='100%'>
-            <Card.Img variant="left" src='./Xcode-fragment.png' width='100%'/>
-            <Card.Body>
+        <Card border="light" style={{width: '100%'}} width='100%' /*className='mb-5'*/ className={`${PostCardStyle.card}`}>
+            <Card.Img src='./Xcode-fragment.png' width='100%' style={{borderTopLeftRadius: 16, borderTopRightRadius: 16}}/>
+            <Card.Body >
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>{description}</Card.Text>
             </Card.Body>
-            <Card.Footer>
-                <small className="text-muted">Last edited: 3 min ago</small>
-            </Card.Footer>
         </Card>
     )
 }

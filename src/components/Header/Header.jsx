@@ -9,7 +9,7 @@ const Header = props => {
     return (
         <React.Fragment>
             <Navbar sticky="top" className={HeaderStyle.navbar} collapseOnSelect expand="sm" variant="dark">
-                    <Navbar.Brand to="/Home">
+                    <Navbar.Brand>
                         <img src={require('./swapLogo.png')} width='30' height='30' />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav"/>

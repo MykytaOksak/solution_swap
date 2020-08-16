@@ -15,7 +15,7 @@ const App = props => {
         <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Header/>
             <Container>
-                <Row className='mt-3 mb-3'>
+                <Row>
                     <Col>
                         <Route path='/Home' render={() => <Home tasks={props.state}/>}/>
                         <Route path='/AllTasks' render={() => <AllTasks tasks={props.state.AllTasks}/>}/>
