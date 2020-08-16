@@ -12,12 +12,12 @@ import Footer from './components/Footer/Footer';
 
 const App = props => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Header/>
             <Container>
                 <Row className='mt-3 mb-3'>
                     <Col>
-                <Route path='/home' exact render={() => <Home tasks={props.state} />} />
+                <Route path='/Home' exact render={() => <Home tasks={props.state} />} />
                 <Route path='/AllTasks' render={() => <AllTasks tasks={props.state.AllTasks} />} />
                 <Route path='/PB' render={() => <PB tasks={props.state.PB}/>}/>
                 <Route path='/MathStat' render={() => <MathStat tasks={props.state.MathStat} />} />

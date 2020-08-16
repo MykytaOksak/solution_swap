@@ -5,9 +5,9 @@ import FooterStyle from './Footer.module.css'
 const Footer = props => {
     console.log(props)
     return (
-        <footer className={FooterStyle.jumbotron}>
+        <footer className={FooterStyle.footer}>
             <Container >
-                <Row>
+                <Row className={FooterStyle.row}>
                     <Col>
                         <h4>Telegram</h4>
                         <a href='https://t.me/sdraste'>Link</a>

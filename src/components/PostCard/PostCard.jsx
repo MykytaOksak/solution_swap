@@ -4,8 +4,8 @@ import PostCardStyle from './PostCardStyle.module.css'
 
 const RenderTask = ({title, description}) => {
     return (
-        <Card bg='light' style={{width: '100%'}} className='mb-5' width='100%'>
-            <Card.Img variant="left" src="holder.js/100px200" fluid/>
+        <Card bg='light' border="light" style={{width: '100%'}} className='mb-5' width='100%'>
+            <Card.Img variant="left" src="https://www.economist.com/sites/default/files/images/2015/09/blogs/economist-explains/code2.png" height='200px'fluid/>
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>{description}</Card.Text>
