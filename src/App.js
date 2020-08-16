@@ -22,7 +22,7 @@ const App = props => {
                         <Route path='/PB' render={() => <PB tasks={props.state.PB}/>}/>
                         <Route path='/MathStat' render={() => <MathStat tasks={props.state.MathStat}/>}/>
                         <Route path='/MathLog' render={() => <MathLog tasks={props.state.MathLog}/>}/>
-                        <Redirect to='/home'/>
+                        <Redirect to='/Home'/>
                     </Col>
                 </Row>
             </Container>
