@@ -1,3 +1,5 @@
+import {rerenderEntireTree} from './../../render'
+
 export const state = {
     PB: [
         {
@@ -55,6 +57,14 @@ export const state = {
     ],
 }
 
-export default {
-    state
+export let addPost = (postMessage) => {
+    let newPost = {
+        id: 5,
+        title: 'New Post',
+        description: postMessage
+    };
+    state.AllTasks.push(newPost);
+    rerenderEntireTree(state);
 }
+
+export default state

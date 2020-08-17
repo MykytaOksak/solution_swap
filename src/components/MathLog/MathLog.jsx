@@ -5,8 +5,8 @@ import PostCard from '../PostCard/PostCard'
 const MathLog = props => {
     return (
         <div>
-            <CreatePost/>
-            <PostCard task={props.tasks}/>
+            <CreatePost addPost={props.addPost} />
+            <PostCard task={props.tasks} />
         </div>
     )
 }
