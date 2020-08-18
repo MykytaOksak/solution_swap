@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/solution_swap/static/css/main.eb50aef9.chunk.css",
-    "main.js": "/solution_swap/static/js/main.31efa8a2.chunk.js",
-    "main.js.map": "/solution_swap/static/js/main.31efa8a2.chunk.js.map",
+    "main.css": "/solution_swap/static/css/main.a4c5625a.chunk.css",
+    "main.js": "/solution_swap/static/js/main.08d57267.chunk.js",
+    "main.js.map": "/solution_swap/static/js/main.08d57267.chunk.js.map",
     "runtime-main.js": "/solution_swap/static/js/runtime-main.93fd88a4.js",
     "runtime-main.js.map": "/solution_swap/static/js/runtime-main.93fd88a4.js.map",
     "static/css/2.11829350.chunk.css": "/solution_swap/static/css/2.11829350.chunk.css",
-    "static/js/2.7a830178.chunk.js": "/solution_swap/static/js/2.7a830178.chunk.js",
-    "static/js/2.7a830178.chunk.js.map": "/solution_swap/static/js/2.7a830178.chunk.js.map",
+    "static/js/2.e468cea8.chunk.js": "/solution_swap/static/js/2.e468cea8.chunk.js",
+    "static/js/2.e468cea8.chunk.js.map": "/solution_swap/static/js/2.e468cea8.chunk.js.map",
     "index.html": "/solution_swap/index.html",
-    "precache-manifest.7e8d272ecae081d45bf69d934334d85f.js": "/solution_swap/precache-manifest.7e8d272ecae081d45bf69d934334d85f.js",
+    "precache-manifest.88e496dd6f2388385c8e1dec54eb8e54.js": "/solution_swap/precache-manifest.88e496dd6f2388385c8e1dec54eb8e54.js",
     "service-worker.js": "/solution_swap/service-worker.js",
     "static/css/2.11829350.chunk.css.map": "/solution_swap/static/css/2.11829350.chunk.css.map",
-    "static/css/main.eb50aef9.chunk.css.map": "/solution_swap/static/css/main.eb50aef9.chunk.css.map",
-    "static/js/2.7a830178.chunk.js.LICENSE.txt": "/solution_swap/static/js/2.7a830178.chunk.js.LICENSE.txt",
-    "static/media/Xcode-fragment.png": "/solution_swap/static/media/Xcode-fragment.5ab99182.png"
+    "static/css/main.a4c5625a.chunk.css.map": "/solution_swap/static/css/main.a4c5625a.chunk.css.map",
+    "static/js/2.e468cea8.chunk.js.LICENSE.txt": "/solution_swap/static/js/2.e468cea8.chunk.js.LICENSE.txt",
+    "static/media/Xcode-fragment.png": "/solution_swap/static/media/Xcode-fragment.5ab99182.png",
+    "static/media/Header.module.css": "/solution_swap/static/media/anime_studying.3590d789.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.93fd88a4.js",
     "static/css/2.11829350.chunk.css",
-    "static/js/2.7a830178.chunk.js",
-    "static/css/main.eb50aef9.chunk.css",
-    "static/js/main.31efa8a2.chunk.js"
+    "static/js/2.e468cea8.chunk.js",
+    "static/css/main.a4c5625a.chunk.css",
+    "static/js/main.08d57267.chunk.js"
   ]
 }
