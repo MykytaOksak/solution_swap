@@ -25,7 +25,7 @@ const PostCard = props => {
 
     return (
         <div>
-            {cardsArray}
+            {cardsArray.reverse()}
         </div>
     )
 }

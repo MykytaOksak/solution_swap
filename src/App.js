@@ -11,18 +11,19 @@ import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 
 const App = props => {
+
     return (
         <div>
-            <Header/>
+            <Header changeShowModal={props.changeShowModal} addPost={props.addPost} showModal={props.state.showModal}/>
             <Container>
                 <Row>
                     <Col>
                         <Route path='/Home' render={() => <Home tasks={props.state}/>}/>
-                        <Route path='/AllTasks' render={() => <AllTasks tasks={props.state.AllTasks} addPost={props.addPost} />} />
-                        <Route path='/PB' render={() => <PB tasks={props.state.PB} addPost={props.addPost} />}/>
-                        <Route path='/MathStat' render={() => <MathStat tasks={props.state.MathStat} addPost={props.addPost} />}/>
-                        <Route path='/MathLog' render={() => <MathLog tasks={props.state.MathLog} addPost={props.addPost} />}/>
-                        <Redirect to='/Home'/>
+                        <Route path='/AllTasks' render={() => <AllTasks tasks={props.state.tasks.AllTasks} addPost={props.addPost} />} />
+                        <Route path='/PB' render={() => <PB tasks={props.state.tasks.PB} addPost={props.addPost} />}/>
+                        <Route path='/MathStat' render={() => <MathStat tasks={props.state.tasks.MathStat} addPost={props.addPost} />}/>
+                        <Route path='/MathLog' render={() => <MathLog tasks={props.state.tasks.MathLog} addPost={props.addPost} />}/>
+                        <Redirect to='/AllTasks'/>
                     </Col>
                 </Row>
             </Container>
