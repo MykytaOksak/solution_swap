@@ -14,7 +14,6 @@ const RenderTask = ({title, description}) => {
     )
 }
 
-
 const PostCard = props => {
     const cardsArray = props.task.map(task => (
         <RenderTask
@@ -29,6 +28,5 @@ const PostCard = props => {
         </div>
     )
 }
-
 
 export default PostCard

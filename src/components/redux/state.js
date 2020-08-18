@@ -57,6 +57,7 @@ export const state = {
         ],
     },
     showModal: false,
+    newPostValue: ''
 }
 
 export const addPost = (postMessage) => {
@@ -64,13 +65,19 @@ export const addPost = (postMessage) => {
         id: 5,
         title: 'New Post',
         description: postMessage
-    };
-    state.tasks.AllTasks.push(newPost);
+    }
+    state.tasks.AllTasks.push(newPost)
+    state.newPostValue = ''
     rerenderEntireTree(state)
 }
 
 export const changeShowModal = () => {
     state.showModal=!state.showModal
+    rerenderEntireTree(state)
+}
+
+export const updateNewPostValue = (text) => {
+    state.newPostValue = text
     rerenderEntireTree(state)
 }
 

@@ -14,20 +14,25 @@ const App = props => {
 
     return (
         <div>
-            <Header changeShowModal={props.changeShowModal} addPost={props.addPost} showModal={props.state.showModal}/>
+            <Header changeShowModal={props.changeShowModal}
+                    addPost={props.addPost}
+                    showModal={props.state.showModal}
+                    newPostValue={props.state.newPostValue}
+                    updateNewPostValue={props.updateNewPostValue}
+            />
             <Container>
                 <Row>
                     <Col>
                         <Route path='/Home' render={() => <Home tasks={props.state}/>}/>
                         <Route path='/AllTasks' render={() => <AllTasks tasks={props.state.tasks.AllTasks} addPost={props.addPost} />} />
                         <Route path='/PB' render={() => <PB tasks={props.state.tasks.PB} addPost={props.addPost} />}/>
-                        <Route path='/MathStat' render={() => <MathStat tasks={props.state.tasks.MathStat} addPost={props.addPost} />}/>
-                        <Route path='/MathLog' render={() => <MathLog tasks={props.state.tasks.MathLog} addPost={props.addPost} />}/>
-                        <Redirect to='/AllTasks'/>
+                        <Route path='/MathStat' render={() => <MathStat tasks={props.state.tasks.MathStat} addPost={props.addPost} />} />
+                        <Route path='/MathLog' render={() => <MathLog tasks={props.state.tasks.MathLog} addPost={props.addPost} />} />
+                        <Redirect to='/AllTasks' />
                     </Col>
                 </Row>
             </Container>
-            <Footer/>
+            <Footer />
         </div>
     )
 }

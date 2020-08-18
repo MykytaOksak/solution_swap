@@ -19,6 +19,11 @@ const CreatePost = props => {
         props.changeShowModal();
     }
 
+    const onChangeHandler = () => {
+        let text = newPostElement.current.value
+        props.updateNewPostValue(text)
+    }
+
     return (
         <div>
             <Button variant="primary" onClick={handleShow}>
@@ -26,10 +31,17 @@ const CreatePost = props => {
             </Button>
 
             <Modal size="lg" show={show} onHide={handleClose}>
-                <Modal.Body>Woohoo, you're reading this text in a modal!
+                <Modal.Body>
                     <Form className={`${CreatePostStyle.form} ${'mt-4 mb-4'}`}>
                         <Form.Group>
-                            <Form.Control className={`${CreatePostStyle.form}`} as="textarea" ref={newPostElement} rows="3" placeholder="Write about your problem..."/>
+                            <Form.Control className={`${CreatePostStyle.form}`}
+                                          as="textarea"
+                                          ref={newPostElement}
+                                          rows="3"
+                                          placeholder="Write about your problem..."
+                                          value={props.newPostValue}
+                                          onChange={onChangeHandler}
+                            />
                         </Form.Group>
                     </Form>
                 </Modal.Body>
@@ -44,7 +56,6 @@ const CreatePost = props => {
             </Modal>
         </div>
     );
-
 }
 
 export default CreatePost
