@@ -57,17 +57,19 @@ export const state = {
         ],
     },
     showModal: false,
-    newPostValue: ''
+    newTaskTitle: 'a',
+    newTaskDescription: 'b'
 }
 
-export const addPost = (postMessage) => {
+export const addPost = (taskTitle, taskDescription) => {
     let newPost = {
         id: 5,
-        title: 'New Post',
-        description: postMessage
+        title: taskTitle,
+        description: taskDescription
     }
     state.tasks.AllTasks.push(newPost)
-    state.newPostValue = ''
+    state.newTaskDescription = ''
+    state.newTaskTitle = ''
     rerenderEntireTree(state)
 }
 

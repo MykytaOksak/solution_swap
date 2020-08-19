@@ -1,12 +1,10 @@
 .footer {
     width: 100%;
     background-color: #ececec;
-    color: white;
     padding: 1rem 0;
     color: black;
 }
 
-.row {
-    border-bottom: #919191;
-    border-color: #0b2e13;
+.a {
+    transition: color 0.2s ease-out 0s;
 }
