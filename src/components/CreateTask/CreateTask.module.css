@@ -1,0 +1,23 @@
+.formTextArea {
+    background-color: #ececec;
+    border-radius: 20px;
+    border-color: #ececec;
+    min-height: 40px;
+}
+.modalBody {
+    border: 0;
+}
+.modal {
+    backdrop-filter: blur(5px);
+}
+.modalDialog div {
+    background: white;
+    border-radius: 1em;
+    border-style: hidden;
+}
+.modalFooter {
+    border: 0;
+}
+.btn {
+    font-weight: 500;
+}

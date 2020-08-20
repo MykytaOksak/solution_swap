@@ -8,7 +8,7 @@ const NavBar = () => {
     return(
         <Navbar sticky="top" className={HeaderStyle.navbar} collapseOnSelect expand="sm" variant="dark">
             <Navbar.Brand>
-                <img src={require('./../assets/images/swapLogo.png')} width='30' height='30' />
+                <img src={require('./../assets/images/swapLogo.png')} width='30' height='30'  alt='solution swap logo'/>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
             <Navbar.Collapse id="responsive-navbar-nav">
