@@ -1,5 +1,5 @@
 import React from 'react'
-import {Button, Col, Container, Jumbotron, Nav, Navbar, Row} from 'react-bootstrap'
+import {Col, Container, Jumbotron, Nav, Navbar, Row} from 'react-bootstrap'
 import HeaderStyle from './Header.module.css'
 import {Link} from 'react-router-dom';
 import CreateTask from '../CreateTask/CreateTask';
@@ -35,12 +35,10 @@ const Header = props => {
                             <h1>Solution Swap</h1>
                             <p>Exchange your solutions with others</p>
                             <p>
-                                <CreateTask changeShowModal={props.changeShowModal}
-                                            addPost={props.addPost}
+                                <CreateTask dispatch={props.dispatch}
                                             showModal={props.showModal}
                                             newTaskTitle={props.newTaskTitle}
                                             newTaskDescription={props.newTaskDescription}
-                                            updateNewPostValue={props.updateNewPostValue}
                                 />
                             </p>
                         </Col>

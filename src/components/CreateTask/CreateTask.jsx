@@ -1,20 +1,22 @@
 import React from 'react'
-import {ModalDialog, Modal, Button, Form} from 'react-bootstrap'
+import {Modal, Button, Form} from 'react-bootstrap'
 import CreateTaskStyle from './CreateTask.module.css'
+import {addTaskActionCreator, changeShowModalActionCreator, updateNewTaskDescriptionActionCreator,
+    updateNewTaskTitleActionCreator} from '../../redux/state';
 
 const CreateTask = props => {
     let show = props.showModal
     let newTaskTitle = React.createRef()
     let newTaskDescription = React.createRef()
-    const handleOnClick = () => props.changeShowModal()
+    const handleOnClick = () => props.dispatch(changeShowModalActionCreator())
     let handleOnClickPost = () => {
-        let taskTitle = newTaskTitle.current.value;
-        let taskDescription = newTaskDescription.current.value;
-        props.addPost(taskTitle, taskDescription);
-        props.changeShowModal();
+/*        let taskTitle = newTaskTitle.current.value;
+        let taskDescription = newTaskDescription.current.value;*/
+        props.dispatch(addTaskActionCreator())
+        props.dispatch(changeShowModalActionCreator())
     }
-    const titleOnChangeHandler = () => props.updateNewPostValue(newTaskTitle.current.value)
-    const descriptionOnChangeHandler = () => props.updateNewPostValue(newTaskDescription.current.value)
+    const titleOnChangeHandler = () => props.dispatch(updateNewTaskTitleActionCreator(newTaskTitle.current.value))
+    const descriptionOnChangeHandler = () => props.dispatch(updateNewTaskDescriptionActionCreator(newTaskDescription.current.value))
     return (
         <div>
             <Button variant='primary' className={CreateTaskStyle.btn} onClick={handleOnClick}>
