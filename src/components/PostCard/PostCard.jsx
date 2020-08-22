@@ -14,7 +14,7 @@ const RenderTask = ({title, description}) => {
     )
 }
 const PostCard = props => {
-    const cardsArray = props.task.map(task => (
+    const tasksArray = props.tasks.map(task => (
         <RenderTask
             title={task.title}
             description={task.description}
@@ -22,7 +22,7 @@ const PostCard = props => {
     ))
     return (
         <div>
-            {cardsArray.reverse()}
+            {tasksArray.reverse()}
         </div>
     )
 }

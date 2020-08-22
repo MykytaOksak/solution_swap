@@ -4,7 +4,7 @@ import PostCard from '../PostCard/PostCard'
 const PB = props => {
     return (
         <div>
-            <PostCard task={props.tasks}/>
+            <PostCard tasks={props.tasks}/>
         </div>
     )
 }

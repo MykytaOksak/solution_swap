@@ -15,8 +15,8 @@ const App = props => {
     return (
         <div>
             <Header dispatch={props.dispatch}
-                    showModal={props.state.showModal}
-                    newPostValue={props.state.newPostValue}
+                    showModal={props.state.tasks.showModal}
+                    newPostValue={props.state.tasks.newPostValue}
             />
             <Container>
                 <Row>

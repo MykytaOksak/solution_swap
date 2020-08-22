@@ -4,6 +4,17 @@
     border-color: #ececec;
     min-height: 40px;
 }
+.formSelect {
+    background-color: #ececec;
+    border-radius: 18px;
+    border-color: #ececec;
+}
+.formFile {
+    background-color: #ececec !important;
+    border-radius: 18px !important;
+    border-color: #ececec !important;
+    border-style: hidden !important;
+}
 .modalBody {
     border: 0;
 }
@@ -19,5 +30,12 @@
     border: 0;
 }
 .btn {
+    font-weight: 500;
+    border-radius: 20px;
+    height: 40px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.formLabel {
     font-weight: 500;
 }

@@ -2,9 +2,9 @@ import React from 'react'
 import PostCard from '../PostCard/PostCard'
 
 const AllTasks = props => {
-        return (
+    return (
         <div>
-            <PostCard task={props.tasks} />
+            <PostCard tasks={props.tasks}/>
         </div>
     )
 }
