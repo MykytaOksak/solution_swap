@@ -1,92 +1,84 @@
 import React from 'react'
-import {ButtonGroup, Button, Col, Form, Modal, Row} from 'react-bootstrap'
+import {Button, Container, Form, Modal, Row} from 'react-bootstrap'
 import CreateTaskStyle from './CreateTask.module.css'
-import {
-    addTaskActionCreator,
-    changeShowModalActionCreator,
-    updateNewTaskDescriptionActionCreator,
-    updateNewTaskTitleActionCreator,
-} from '../../redux/createTaskReducer';
 
 const CreateTask = props => {
-    let show = props.showModal
-    let newTaskTitle = React.createRef()
-    let newTaskDescription = React.createRef()
-    const handleOnClick = () => props.dispatch(changeShowModalActionCreator())
-    let handleOnClickPost = () => {
-        /*        let taskTitle = newTaskTitle.current.value;
-                let taskDescription = newTaskDescription.current.value;*/
-        props.dispatch(addTaskActionCreator())
-        props.dispatch(changeShowModalActionCreator())
+    const show = props.show
+
+    const onShow = () => props.showModal()
+
+    const onClose = () => props.closeModal()
+
+    const onAddTask = () => {
+        props.addTask(props.newTaskTitle, props.newTaskDescription, props.newTaskType)
+        props.closeModal()
     }
-    const titleOnChangeHandler = () => props.dispatch(updateNewTaskTitleActionCreator(newTaskTitle.current.value))
-    const descriptionOnChangeHandler = () => props.dispatch(updateNewTaskDescriptionActionCreator(newTaskDescription.current.value))
+
+    const onTitleChange = (e) => props.updateNewTaskTitle(e.target.value)
+
+    const onDescriptionChange = (e) => props.updateNewTaskDescription(e.target.value)
+
+    const onSelectChange = (e) => props.updateType(e.target.value)
+
+
     return (
         <div>
-            <Button variant='primary' className={CreateTaskStyle.btn} onClick={handleOnClick}>
-                Pomogite ya obosrals'a
+            <Button variant='primary' className={CreateTaskStyle.btn} onClick={onShow}>
+                Add task
             </Button>
 
             <Modal className={CreateTaskStyle.modal}
                    dialogClassName={CreateTaskStyle.modalDialog}
                    size='lg'
-                   show={show}>
-                <Modal.Body className={`${CreateTaskStyle.modalBody}`}>
-                    <Form>
-                        <Form.Group as={Row}>
-                            <Form.Label className={`${CreateTaskStyle.formLabel}`} column sm={2}>Task type</Form.Label>
-                            <Col sm={3}>
-                                <Form.Control className={`${CreateTaskStyle.formSelect}`} as="select">
-                                    <option value="0">Choose</option>
-                                    <option value="1">PB</option>
-                                    <option value="2">MathStat</option>
-                                    <option value="3">MathLog</option>
+                   show={show}
+                   onHide={onClose}>
+                <Container>
+                    <Modal.Body className={`${CreateTaskStyle.modalBody}`}>
+                        <Form>
+                            <Form.Group as={Row} className='mb-4'>
+                                <Form.Label className={`${CreateTaskStyle.formLabel}`}>Task type</Form.Label>
+                                <Form.Control className={`${CreateTaskStyle.formSelect}`}
+                                              as='select'
+                                              value={props.newTaskType}
+                                              onChange={onSelectChange}>
+                                    <option value=''>Choose</option>
+                                    <option value='PB'>PB</option>
+                                    <option value='MathStat'>MathStat</option>
+                                    <option value='MathLog'>MathLog</option>
                                 </Form.Control>
-                            </Col>
-                        </Form.Group>
-                        <Form.Group as={Row}>
-                            <Form.Label className={`${CreateTaskStyle.formLabel}`} column sm={2}>Task name</Form.Label>
-                            <Col sm={10}>
+                            </Form.Group>
+                            <Form.Group as={Row} className='mb-4'>
+                                <Form.Label className={`${CreateTaskStyle.formLabel}`}>Task name</Form.Label>
                                 <Form.Control className={`${CreateTaskStyle.formTextArea}`}
                                               as='textarea'
-                                              ref={newTaskTitle}
                                               rows='1'
                                               placeholder='Name your problem'
                                               value={props.newTaskTitle}
-                                              onChange={titleOnChangeHandler}
+                                              onChange={onTitleChange}
                                 />
-                            </Col>
-                        </Form.Group>
-                        <Form.Group as={Row}>
-                            <Form.Label className={`${CreateTaskStyle.formLabel}`} column
-                                        sm={2}>Description</Form.Label>
-                            <Col sm={10}>
+                            </Form.Group>
+                            <Form.Group as={Row} className='mb-4'>
+                                <Form.Label className={`${CreateTaskStyle.formLabel}`}>Description</Form.Label>
                                 <Form.Control className={`${CreateTaskStyle.formTextArea}`}
                                               as="textarea"
-                                              ref={newTaskDescription}
                                               rows="3"
                                               placeholder='Write about your problem...'
                                               value={props.newTaskDescription}
-                                              onChange={descriptionOnChangeHandler}
+                                              onChange={onDescriptionChange}
                                 />
-                            </Col>
-                        </Form.Group>
-                        <Form.Group as={Row} className='mb-0'>
-                            <Form.Label className={`${CreateTaskStyle.formLabel}`} column sm={2}>Attachment</Form.Label>
-                            <Col sm={5}>
-                                <Form.File/>
-                            </Col>
-                        </Form.Group>
-
-                    </Form>
-                </Modal.Body>
-                <Modal.Footer className={CreateTaskStyle.modalFooter}>
-                    <ButtonGroup>
-                        <Button className={`${CreateTaskStyle.btn}`} variant="secondary"
-                                onClick={handleOnClick}>Close</Button>
-                        <Button className={`${CreateTaskStyle.btn}`} variant="primary"
-                                onClick={handleOnClickPost}>Post</Button>
-                    </ButtonGroup>
+                            </Form.Group>
+                            <Form.Group as={Row} className='mb-4'>
+                                <Form.Label className={`${CreateTaskStyle.formLabel}`}>Attachment</Form.Label>
+                                <Form.Control name="images[]" type="file" multiple />
+                            </Form.Group>
+                        </Form>
+                    </Modal.Body>
+                </Container>
+                <Modal.Footer as={Button}
+                              onClick={onAddTask}
+                              variant='primary'
+                              className={CreateTaskStyle.modalFooter}>
+                              <p className='mr-auto ml-auto'>ADD TASK</p>
                 </Modal.Footer>
             </Modal>
         </div>

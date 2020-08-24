@@ -10,22 +10,19 @@ import MathLog from './components/MathLog/MathLog';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 
-const App = props => {
 
+const App = props => {
     return (
         <div>
-            <Header dispatch={props.dispatch}
-                    showModal={props.state.tasks.showModal}
-                    newPostValue={props.state.tasks.newPostValue}
-            />
+            <Header store={props.store} />
             <Container>
                 <Row>
                     <Col>
-                        <Route path='/Home' render={() => <Home tasks={props.state}/>}/>
-                        <Route path='/AllTasks' render={() => <AllTasks tasks={props.state.tasks.AllTasks} />} />
-                        <Route path='/PB' render={() => <PB tasks={props.state.tasks.PB} />}/>
-                        <Route path='/MathStat' render={() => <MathStat tasks={props.state.tasks.MathStat} />} />
-                        <Route path='/MathLog' render={() => <MathLog tasks={props.state.tasks.MathLog} />} />
+                        <Route path='/Home' render={() => <Home />}/>
+                        <Route path='/AllTasks' render={() => <AllTasks store={props.store} />} />
+                        <Route path='/PB' render={() => <PB store={props.store} />}/>
+                        <Route path='/MathStat' render={() => <MathStat store={props.store} />} />
+                        <Route path='/MathLog' render={() => <MathLog store={props.store} />} />
                         <Redirect to='/AllTasks' />
                     </Col>
                 </Row>

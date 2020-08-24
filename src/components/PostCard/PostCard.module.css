@@ -1,14 +1,15 @@
 .card {
     border-radius: 1em !important;
     border-style: hidden;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-    background-color: #ececec !important;
-    -webkit-box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.48);
-    -moz-box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.48);
-    box-shadow: 0px 0px 10px -3px rgba(0,0,0,0.48);
+    margin: 3rem auto;
+    width: 90%;
+    background-color: white !important;
+/*  -webkit-box-shadow: 0px 0px 29px 11px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 29px 11px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 29px 11px rgba(0,0,0,0.15);*/
+    box-shadow: 0px 4px 16px rgba(46,41,51,0.08), 0px 8px 24px rgba(71,63,79,0.16);
 }
 .cardImg {
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
 }

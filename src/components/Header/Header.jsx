@@ -2,7 +2,7 @@ import React from 'react'
 import {Col, Container, Jumbotron, Nav, Navbar, Row} from 'react-bootstrap'
 import HeaderStyle from './Header.module.css'
 import {Link} from 'react-router-dom';
-import CreateTask from '../CreateTask/CreateTask';
+import CreateTaskContainer from '../CreateTask/CreateTaskContainer';
 
 const NavBar = () => {
     return(
@@ -27,20 +27,13 @@ const Header = props => {
     return (
         <React.Fragment>
             <NavBar />
-
             <Jumbotron className={HeaderStyle.jumbotron}>
                 <Container>
                     <Row>
-                        <Col className='col-12 col-sm-6'>
+                        <Col>
                             <h1>Solution Swap</h1>
-                            <p>Exchange your solutions with others</p>
-                            <p>
-                                <CreateTask dispatch={props.dispatch}
-                                            showModal={props.showModal}
-                                            newTaskTitle={props.newTaskTitle}
-                                            newTaskDescription={props.newTaskDescription}
-                                />
-                            </p>
+                            <h5 className='mb-3'>Exchange your solutions with others</h5>
+                            <CreateTaskContainer store={props.store}/>
                         </Col>
                     </Row>
                 </Container>

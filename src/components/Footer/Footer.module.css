@@ -1,8 +1,10 @@
 .footer {
-    width: 100%;
-    background-color: #ececec;
+    background-color: white;
     padding: 1rem 0;
     color: black;
+    border: white solid;
+    border-top: rgb(234, 234, 234) solid 1px;
+
 }
 
 .a {

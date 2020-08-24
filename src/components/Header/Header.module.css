@@ -3,10 +3,11 @@
     background-position: top;
     background-attachment: fixed;*/
     background: rgb(241,254,242);
-    background: linear-gradient(249deg, rgba(241,254,242,1) 0%, rgba(188,223,255,1) 100%);
+    background: linear-gradient(249deg, rgb(237, 255, 238) 0%, rgb(201, 230, 255) 100%);
     margin: 0;
-    padding: 4em 2em;
+    padding: 4em 1em;
     border-radius: 0 !important;
+    text-align: center;
 }
 .nav{
     font-size: 14pt;
@@ -16,5 +17,6 @@
     backdrop-filter: saturate(180%) blur(20px);
 }
 .a {
-    transition: color 0.2s ease-out 0s;
+    transition: color 0.15s ease-out 0s;
 }
+

@@ -1,19 +1,11 @@
 .formTextArea {
-    background-color: #ececec;
     border-radius: 20px;
     border-color: #ececec;
     min-height: 40px;
 }
 .formSelect {
-    background-color: #ececec;
     border-radius: 18px;
     border-color: #ececec;
-}
-.formFile {
-    background-color: #ececec !important;
-    border-radius: 18px !important;
-    border-color: #ececec !important;
-    border-style: hidden !important;
 }
 .modalBody {
     border: 0;
@@ -22,20 +14,24 @@
     backdrop-filter: blur(5px);
 }
 .modalDialog div {
-    background: white;
+    background: #ffffff;
     border-radius: 1em;
     border-style: hidden;
-}
-.modalFooter {
-    border: 0;
 }
 .btn {
     font-weight: 500;
     border-radius: 20px;
-    height: 40px;
+    min-height: 40px;
     padding-left: 1rem;
     padding-right: 1rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 .formLabel {
+}
+.modalFooter {
+    border-radius: 0 0 13px 13px;
+    border-style: unset;
+    width: 100%;
     font-weight: 500;
 }

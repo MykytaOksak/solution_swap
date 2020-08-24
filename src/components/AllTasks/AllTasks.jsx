@@ -2,10 +2,9 @@ import React from 'react'
 import PostCard from '../PostCard/PostCard'
 
 const AllTasks = props => {
+    let state = props.store.getState().allTasks
     return (
-        <div>
-            <PostCard tasks={props.tasks}/>
-        </div>
+        <PostCard tasks={state.AllTasks}/>
     )
 }
 
