@@ -19,8 +19,10 @@ let initialState = {
 export const mathLogReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_MATH_LOG_TASK:
-            state.MathLog.push(action.newTask)
-            return state
+            return {
+                ...state,
+                MathLog: [...state.MathLog, action.newTask]
+            }
         default:
             return state
     }

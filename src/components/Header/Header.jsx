@@ -33,7 +33,7 @@ const Header = props => {
                         <Col>
                             <h1>Solution Swap</h1>
                             <h5 className='mb-3'>Exchange your solutions with others</h5>
-                            <CreateTaskContainer store={props.store}/>
+                            <CreateTaskContainer />
                         </Col>
                     </Row>
                 </Container>

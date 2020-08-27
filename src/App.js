@@ -14,7 +14,7 @@ import Footer from './components/Footer/Footer';
 const App = props => {
     return (
         <div>
-            <Header store={props.store} />
+            <Header />
             <Container>
                 <Row>
                     <Col>

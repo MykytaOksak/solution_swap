@@ -18,8 +18,10 @@ let initialState = {
 export const pbReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_PB_TASK:
-            state.PB.push(action.newTask)
-            return state
+            return {
+                ...state,
+                PB: [...state.PB, action.newTask]
+            }
         default:
             return state
     }

@@ -23,8 +23,10 @@ let initialState = {
 export const allTasksReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_TASK:
-            state.AllTasks.push(action.newTask)
-            return state
+            return {
+                ...state,
+                AllTasks: [...state.AllTasks, action.newTask]
+            }
         default:
             return state
     }

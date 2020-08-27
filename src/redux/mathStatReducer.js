@@ -18,8 +18,10 @@ let initialState = {
 export const mathStatReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_MATH_STAT_TASK:
-            state.MathStat.push(action.newTask)
-            return state
+            return {
+                ...state,
+                MathStat: [...state.MathStat, action.newTask]
+            }
         default:
             return state
     }

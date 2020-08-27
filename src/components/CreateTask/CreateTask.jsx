@@ -3,9 +3,14 @@ import {Button, Container, Form, Modal, Row} from 'react-bootstrap'
 import CreateTaskStyle from './CreateTask.module.css'
 
 const CreateTask = props => {
+
     const show = props.show
 
-    const onShow = () => props.showModal()
+    const onShow = () => {
+        console.log(props.show)
+        props.showModal()
+        console.log(props.show)
+    }
 
     const onClose = () => props.closeModal()
 
@@ -26,7 +31,6 @@ const CreateTask = props => {
             <Button variant='primary' className={CreateTaskStyle.btn} onClick={onShow}>
                 Add task
             </Button>
-
             <Modal className={CreateTaskStyle.modal}
                    dialogClassName={CreateTaskStyle.modalDialog}
                    size='lg'
