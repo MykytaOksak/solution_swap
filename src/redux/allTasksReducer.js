@@ -1,7 +1,7 @@
 import{ADD_TASK} from './actions'
 
 let initialState = {
-    AllTasks: [
+    tasks: [
         {
             id: 1,
             title: 'activeClassName attribute refuses to work',
@@ -25,7 +25,7 @@ export const allTasksReducer = (state = initialState, action) => {
         case ADD_TASK:
             return {
                 ...state,
-                AllTasks: [...state.AllTasks, action.newTask]
+                tasks: [...state.tasks, action.newTask]
             }
         default:
             return state

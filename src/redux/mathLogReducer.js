@@ -1,5 +1,4 @@
-import allTasksReducer from './allTasksReducer';
-import {ADD_MATH_LOG_TASK, ADD_PB_TASK} from './actions';
+import {ADD_MATH_LOG_TASK} from './actions';
 
 let initialState = {
     MathLog: [

@@ -1,10 +1,10 @@
 import React from 'react'
-import PostCard from '../PostCard/PostCard'
+import PostCard from '../AddCard/AddCard'
 
 const MathLog = props => {
-    let state = props.store.getState().mathLog
-    return (
-        <PostCard tasks={state.MathLog}/>
+/*     let state = props.store.getState().mathLog
+ */    return (
+        <PostCard />
     )
 }
 

@@ -25,7 +25,7 @@ const NavBar = () => {
 }
 const Header = props => {
     return (
-        <React.Fragment>
+        <>
             <NavBar />
             <Jumbotron className={HeaderStyle.jumbotron}>
                 <Container>
@@ -38,7 +38,7 @@ const Header = props => {
                     </Row>
                 </Container>
             </Jumbotron>
-        </React.Fragment>
+        </>
     )
 }
 

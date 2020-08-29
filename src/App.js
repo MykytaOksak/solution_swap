@@ -13,22 +13,22 @@ import Footer from './components/Footer/Footer';
 
 const App = props => {
     return (
-        <div>
+        <>
             <Header />
             <Container>
                 <Row>
                     <Col>
-                        <Route path='/Home' render={() => <Home />}/>
-                        <Route path='/AllTasks' render={() => <AllTasks store={props.store} />} />
-                        <Route path='/PB' render={() => <PB store={props.store} />}/>
+                        <Route path='/Home' render={() => <Home />} />
+                        <Route path='/AllTasks' render={() => <AllTasks />} />
+{/*                         <Route path='/PB' render={() => <PB store={props.store} />} />
                         <Route path='/MathStat' render={() => <MathStat store={props.store} />} />
-                        <Route path='/MathLog' render={() => <MathLog store={props.store} />} />
+                        <Route path='/MathLog' render={() => <MathLog store={props.store} />} /> */}
                         <Redirect to='/AllTasks' />
                     </Col>
                 </Row>
             </Container>
             <Footer />
-        </div>
+        </>
     )
 }
 
